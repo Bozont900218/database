@@ -1,0 +1,114 @@
+name: sonarr
+description: ''
+tags:
+- 2160p
+- HDR
+- Lossless Audio
+- h265
+- x265
+upgradesAllowed: true
+minCustomFormatScore: 50
+upgradeUntilScore: 300
+minScoreIncrement: 10
+custom_formats:
+- name: TrueHD
+  score: 150
+- name: DTS-X
+  score: 140
+- name: Dolby Atmos
+  score: 130
+- name: Dolby Digital +
+  score: 130
+- name: DTS-HD MA
+  score: 110
+- name: FLAC
+  score: 100
+- name: HEVC
+  score: 100
+- name: PCM
+  score: 100
+- name: DTS-HD HRA
+  score: 90
+- name: DTS-ES
+  score: 70
+- name: DTS
+  score: 60
+- name: AAC
+  score: 50
+- name: Dolby Vision
+  score: 50
+- name: HDR
+  score: 40
+- name: Dolby Digital
+  score: 30
+- name: HDR10+
+  score: 30
+- name: 3D
+  score: -10000
+- name: Dolby Vision (Without Fallback)
+  score: -10000
+- name: Full Disc
+  score: -10000
+- name: Full Disc (Quality Match)
+  score: -10000
+- name: Xvid
+  score: -10000
+- name: x264 (2160p)
+  score: -999999
+custom_formats_radarr:
+- name: IMAX
+  score: 20
+- name: IMAX Enhanced
+  score: 20
+- name: Special Edition
+  score: 15
+- name: Extras
+  score: -10000
+custom_formats_sonarr:
+- name: Season Pack
+  score: 20
+- name: TV Extras
+  score: -10000
+qualities:
+- id: 4
+  name: Bluray-2160p
+- id: -4
+  name: 2160p Web
+  description: ''
+  qualities:
+  - id: 5
+    name: WEBDL-2160p
+  - id: 6
+    name: WEBRip-2160p
+- id: 7
+  name: HDTV-2160p
+- id: 10
+  name: Bluray-1080p
+- id: -1
+  name: 1080p Web
+  description: All capable of being indistinguishable from source. WEB-DL included
+    to not allow unknown encode to trump known WEB-DL.
+  qualities:
+  - id: 9
+    name: WEBDL-1080p
+  - id: 11
+    name: WEBRip-1080p
+- id: 12
+  name: HDTV-1080p
+- id: 13
+  name: Bluray-720p
+- id: -5
+  name: 720p Web
+  description: ''
+  qualities:
+  - id: 14
+    name: WEBDL-720p
+  - id: 15
+    name: WEBRip-720p
+- id: 16
+  name: HDTV-720p
+upgrade_until:
+  id: 16
+  name: HDTV-720p
+  description: 720p high-definition digital television capture
+language: original

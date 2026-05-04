@@ -1,0 +1,56 @@
+name: HDR10+
+pattern: \b(HDR10(?=[+]|P(lus)?))
+description: This regex matches `HDR10` when followed by either a plus sign `+`, `P`,
+  or `Plus`
+tags:
+- Enhancement
+- Colour Grade
+- HDR
+tests:
+- id: 1
+  input: HDR
+  expected: false
+- id: 2
+  input: HDR+
+  expected: false
+- id: 3
+  input: HDR10
+  expected: false
+- id: 4
+  input: HDR10+
+  expected: true
+- id: 5
+  input: HLG HDR
+  expected: false
+- id: 6
+  input: SDR HDR
+  expected: false
+- id: 7
+  input: PQ HDR
+  expected: false
+- id: 8
+  input: HDR10P
+  expected: true
+- id: 9
+  input: HDR10Plus
+  expected: true
+- id: 10
+  input: Schindler's List (1993) 2160p UHD BluRay Hybrid REMUX HEVC DV HDR10+ TrueHD
+    Atmos 7.1 English-WiLDCAT
+  expected: true
+- id: 11
+  input: La Maison S01 REPACK 2160p ATVP WEB-DL Dual-Audio DD+ 5.1 Atmos DV HDR10+
+    H.265-Kitsune
+  expected: true
+- id: 12
+  input: Liu lang di qiu 2 AKA The Wandering Earth II 2023 2160p CHN UHD Blu-ray DoVi
+    HDR10 HEVC TrueHD 7.1 Atmos-ANKO
+  expected: false
+- id: 13
+  input: Schindler's List (1993) 2160p UHD BluRay Hybrid REMUX HEVC DV HDR10 Plus
+    TrueHD Atmos 7.1 English-WiLDCAT
+  expected: true
+- id: 14
+  input: Killers of the Flower Moon (2023) {tmdb-466420} [iT][WEBDL-2160p][DV HDR10Plus][EAC3
+    Atmos 5.1][h265]-FLUX.mkv
+  expected: true

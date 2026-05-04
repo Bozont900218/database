@@ -1,0 +1,19 @@
+name: Dual Audio
+description: Matches releases that don't include an English language track. Dual audio
+  is allowed.
+tags:
+- Language
+conditions:
+- exceptLanguage: false
+  language: hungarian
+  name: Hungarian
+  negate: true
+  required: true
+  type: language
+- exceptLanguage: false
+  language: english
+  name: Includes English
+  negate: false
+  required: false
+  type: language
+tests: []

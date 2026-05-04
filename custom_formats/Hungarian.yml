@@ -1,0 +1,13 @@
+name: Hungarian
+description: Matches releases that include an Hungarian language track. Dual audio
+  is NOT allowed.
+tags:
+- Language
+conditions:
+- exceptLanguage: false
+  language: hungarian
+  name: Hungarian
+  negate: true
+  required: true
+  type: language
+tests: []

@@ -1,0 +1,12 @@
+name: Dolby Digital
+pattern: \bDD[^a-z+]|(?<!e-)\b(ac-?3)\b
+description: ''
+tags:
+- Audio
+tests:
+- id: 1
+  input: Un-Ex You 2025 1080p NF WEB-DL DD 5.1 H.264-FLUX
+  expected: true
+- id: 2
+  input: Un-Ex You 2025 1080p NF WEB-DL DD+ 5.1 H.264-FLUX
+  expected: false
