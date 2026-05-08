@@ -7,7 +7,7 @@ conditions:
 - exceptLanguage: false
   language: hungarian
   name: Hungarian
-  negate: true
+  negate: false
   required: true
   type: language
 tests: []

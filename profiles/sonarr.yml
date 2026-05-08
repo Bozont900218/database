@@ -7,10 +7,12 @@ tags:
 - h265
 - x265
 upgradesAllowed: true
-minCustomFormatScore: 50
+minCustomFormatScore: 65
 upgradeUntilScore: 300
 minScoreIncrement: 10
-custom_formats:
+custom_formats: []
+custom_formats_radarr: []
+custom_formats_sonarr:
 - name: TrueHD
   score: 150
 - name: DTS-X
@@ -37,12 +39,18 @@ custom_formats:
   score: 50
 - name: Dolby Vision
   score: 50
+- name: Season Pack
+  score: 50
 - name: HDR
   score: 40
 - name: Dolby Digital
   score: 30
 - name: HDR10+
   score: 30
+- name: Dual Audio
+  score: 20
+- name: Hungarian
+  score: 15
 - name: 3D
   score: -10000
 - name: Dolby Vision (Without Fallback)
@@ -51,24 +59,12 @@ custom_formats:
   score: -10000
 - name: Full Disc (Quality Match)
   score: -10000
+- name: TV Extras
+  score: -10000
 - name: Xvid
   score: -10000
 - name: x264 (2160p)
   score: -999999
-custom_formats_radarr:
-- name: IMAX
-  score: 20
-- name: IMAX Enhanced
-  score: 20
-- name: Special Edition
-  score: 15
-- name: Extras
-  score: -10000
-custom_formats_sonarr:
-- name: Season Pack
-  score: 20
-- name: TV Extras
-  score: -10000
 qualities:
 - id: 4
   name: Bluray-2160p

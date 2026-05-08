@@ -7,12 +7,12 @@ conditions:
 - exceptLanguage: false
   language: hungarian
   name: Hungarian
-  negate: true
+  negate: false
   required: true
   type: language
-- exceptLanguage: false
-  language: english
-  name: Includes English
+- exceptLanguage: true
+  language: hungarian
+  name: Anything Else
   negate: false
   required: false
   type: language
