@@ -36,8 +36,6 @@ custom_formats_radarr:
   score: 60
 - name: AAC
   score: 50
-- name: Dolby Vision
-  score: 50
 - name: HDR
   score: 40
 - name: Dolby Digital

@@ -1,12 +1,70 @@
-'conditions':
-- 'name': 'Dolby Vision'
-  'negate': false
-  'pattern': 'Dolby Vision'
-  'required': true
-  'type': 'release_title'
-'description': 'Matches the ''Dolby Vision'' Regex Pattern'
-'name': 'Dolby Vision'
-'tags':
-- 'Colour Grade'
-- 'HDR'
-'tests': []
+name: Dolby Vision
+description: Matches the 'Dolby Vision' Regex Pattern
+tags:
+- Colour Grade
+- HDR
+conditions:
+- name: Dolby Vision
+  negate: false
+  pattern: Dolby Vision
+  required: true
+  type: release_title
+- name: HDR
+  negate: true
+  pattern: HDR
+  required: false
+  type: release_title
+- name: HDR10+
+  negate: true
+  pattern: HDR10+
+  required: false
+  type: release_title
+tests:
+- conditionResults:
+  - matches: true
+    name: Dolby Vision
+    negate: false
+    pattern: Dolby Vision
+    required: true
+    type: release_title
+  - matches: false
+    name: HDR
+    negate: true
+    pattern: HDR
+    required: false
+    type: release_title
+  - matches: true
+    name: HDR10+
+    negate: true
+    pattern: HDR10+
+    required: false
+    type: release_title
+  expected: false
+  id: 1
+  input: Saving.Private.Ryan.1998.1080p.UHD.BluRay.DDP.7.1.DoVi-HDR10+.x265.HuN-GOODWILL
+  lastRun: '2026-05-11T22:42:03.501316'
+  passes: true
+- conditionResults:
+  - matches: true
+    name: Dolby Vision
+    negate: false
+    pattern: Dolby Vision
+    required: true
+    type: release_title
+  - matches: false
+    name: HDR
+    negate: true
+    pattern: HDR
+    required: false
+    type: release_title
+  - matches: false
+    name: HDR10+
+    negate: true
+    pattern: HDR10+
+    required: false
+    type: release_title
+  expected: true
+  id: 2
+  input: Saving.Private.Ryan.1998.UHD.BluRay.2160p.REMUX.Dolby.Vision.DL.DTS-HD.MA.7.1.HEVC.HUN-TRiNiTY
+  lastRun: '2026-05-11T22:42:03.501316'
+  passes: true
